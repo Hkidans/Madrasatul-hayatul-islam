@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Madarasatul Hayatul Islam Kidandan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard">
+  <aside class="sidebar">
+    <div class="side-brand"><img src="assets/school-logo.jpg" alt=""><span>School Admin</span></div>
+    <button class="side-link active">Dashboard</button>
+    <button class="side-link">Students</button>
+    <button class="side-link">Announcements</button>
+    <button class="side-link">Results</button>
+    <button class="side-link">Settings</button>
+    <button id="logoutBtn" class="side-link logout">Logout</button>
+  </aside>
+  <main class="dash-main">
+    <div class="dash-top">
+      <div><p class="eyebrow">ADMIN CONTROL</p><h1>School Dashboard</h1></div>
+      <span id="adminEmailDisplay" class="admin-chip">Loading...</span>
+    </div>
+    <section class="stats">
+      <div class="stat"><span>Students</span><strong id="studentCount">—</strong></div>
+      <div class="stat"><span>Announcements</span><strong id="announcementCount">—</strong></div>
+      <div class="stat"><span>School Status</span><strong>Active</strong></div>
+    </section>
+    <section class="dash-grid">
+      <div class="dash-panel">
+        <div class="panel-head"><h2>Publish Announcement</h2></div>
+        <form id="announcementForm">
+          <label>Title<input id="announcementTitle" required></label>
+          <label>Message<textarea id="announcementText" rows="5" required></textarea></label>
+          <button class="btn primary" type="submit">Publish</button>
+          <p id="announcementMessage" class="form-message"></p>
+        </form>
+      </div>
+      <div class="dash-panel">
+        <div class="panel-head"><h2>Student Management</h2></div>
+        <p>Add students and manage their records from the secure database.</p>
+        <button class="btn secondary" id="loadStudentsBtn">Load Students</button>
+        <div id="studentTableWrap"></div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="js/admin-dashboard.js"></script>
+</body>
+</html>
